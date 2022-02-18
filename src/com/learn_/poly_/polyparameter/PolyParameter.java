@@ -1,4 +1,4 @@
-package com.learn.poly_.polyparameter;
+package com.learn_.poly_.polyparameter;
 
 public class PolyParameter {
 

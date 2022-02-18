@@ -1,4 +1,4 @@
-package com.learn.poly_.polyarr;
+package com.learn_.poly_.polyarr;
 
 public class PloyArray {
     public static void main(String[] args) {

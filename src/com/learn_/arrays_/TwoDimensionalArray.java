@@ -1,4 +1,4 @@
-package com.learn.arrays_;
+package com.learn_.arrays_;
 
 public class TwoDimensionalArray {
     public static void main(String[] args) {

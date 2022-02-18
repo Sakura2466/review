@@ -1,4 +1,4 @@
-package com.learn.poly_.dynamic;
+package com.learn_.poly_.dynamic;
 
 public class DynamicBinding {
     public static void main(String[] args) {

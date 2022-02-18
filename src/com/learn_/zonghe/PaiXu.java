@@ -1,6 +1,5 @@
-package com.learn.zonghe;
+package com.learn_.zonghe;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class PaiXu {

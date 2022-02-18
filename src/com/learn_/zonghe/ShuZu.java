@@ -1,4 +1,4 @@
-package com.learn.zonghe;
+package com.learn_.zonghe;
 
 public class ShuZu {
     public static void main(String[] args) {

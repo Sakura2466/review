@@ -1,4 +1,4 @@
-package com.learn.objcet_;
+package com.learn_.objcet_;
 
 public class EqualsExercise01 {
     public static void main(String[] args) {
