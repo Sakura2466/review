@@ -19,17 +19,16 @@ public class LinkedListTest {
         nodes[1]=first;
         for (int i = 0; i < nodes.length; i++) {
             Node node = nodes[i];
+            System.out.println(node);
             if(node!=null){
                 while (true){
                     if (first.next==null){
                         break;
                     }
-                    System.out.println(first.toString());
+                    System.out.println(first.next.toString());
                     first = first.next;
                 }
             }
-            System.out.println(node);
-
         }
 
 
