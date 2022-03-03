@@ -1,4 +1,4 @@
-package com.innerclass;
+package com.innerclass_;
 
 public class InnerClassExercise {
     public static void main(String[] args) {

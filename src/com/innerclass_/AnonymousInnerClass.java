@@ -1,4 +1,4 @@
-package com.innerclass;
+package com.innerclass_;
 
 public class AnonymousInnerClass {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class AnonymousInnerClass {
 }
 
 interface Teacher{
-    public void info();
+    void info();
 }
 
 class Person{
