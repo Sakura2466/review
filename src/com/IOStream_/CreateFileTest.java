@@ -9,7 +9,7 @@ import java.io.IOException;
  * @author wanghao
  * @version 1.0
  */
-public class CreatFileTest {
+public class CreateFileTest {
     public static void main(String[] args) {
 
     }
