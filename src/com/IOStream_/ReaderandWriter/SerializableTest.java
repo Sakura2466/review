@@ -30,6 +30,7 @@ public class SerializableTest {
         Dog dog = new Dog(name, age, color);
         System.out.println(dog);
         String serPath = "C:\\Users\\hjly\\Desktop\\mytemp\\dog.dat";
+        //创建对象输出流
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(serPath));
         oos.writeObject(dog);
         oos.close();
