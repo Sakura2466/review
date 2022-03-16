@@ -13,7 +13,7 @@ public class BufferedReadTest {
         String path = "C:\\Users\\hjly\\Desktop\\mytemp\\hello.txt";
         BufferedReader br = new BufferedReader(new FileReader(path));
         String str = "";
-        if((str=br.readLine())!=null){
+        while ((str=br.readLine())!=null){
             System.out.println(str);
         }
         if(br!=null){
