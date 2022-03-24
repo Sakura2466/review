@@ -8,16 +8,18 @@ import java.util.ArrayList;
  */
 public class ArrayListTest {
     public static void main(String[] args) {
-        /*
-        * 无参构造器，初始化容量为0，第一次add时，扩容到10
-        * 满了以后再次扩容，扩容容量1.5倍
-        * */
+        /**
+        * 底层维护了一个object类型的数组elementData，初始化容量为0
+        * 第一次添加时扩容到10    elementData[10]
+        * 满了以后再次扩容，扩容容量1.5倍 elementData[15]
+        */
         ArrayList arrayList = new ArrayList();
-        /*
-        * 有参构造器，初始化为指定大小
-        * 满了以后再次扩容，扩容容量1.5倍
-        * */
+
+        /**
+        * 有参构造器，初始化为指定大小 elementData[6]
+        * 满了以后再次扩容，扩容容量1.5倍 elementData[9]
+        */
         ArrayList arrayList1 = new ArrayList(5);
-        //不安全，效率高
+
     }
 }
