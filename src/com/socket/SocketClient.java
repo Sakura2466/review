@@ -1,12 +1,8 @@
 package com.socket;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
-import java.net.UnknownHostException;
-import java.nio.charset.StandardCharsets;
 
 /**
  * @author wanghao
@@ -16,17 +12,19 @@ public class SocketClient {
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket(InetAddress.getLocalHost(),9999);
         OutputStream outputStream = socket.getOutputStream();
-        outputStream.write("hello,server".getBytes());
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
+        bufferedWriter.write("hello,server");
+        bufferedWriter.newLine();
+        bufferedWriter.flush();
         socket.shutdownOutput();
         InputStream inputStream = socket.getInputStream();
-        byte[] bytes = new byte[1024];
-        int readlen = 0;
-        while((readlen=inputStream.read(bytes))!=-1){
-            System.out.println(new String(bytes,0,readlen));
-        }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        String s = bufferedReader.readLine();
+        System.out.println(s);
 
         inputStream.close();
         outputStream.close();
         socket.close();
+
     }
 }

@@ -1,8 +1,6 @@
 package com.socket;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -15,13 +13,14 @@ public class SocketServer {
         ServerSocket serverSocket = new ServerSocket(9999);
         Socket socket = serverSocket.accept();
         InputStream inputStream = socket.getInputStream();
-        byte[] bytes = new byte[1024];
-        int len = 0;
-        while ((len=inputStream.read(bytes))!=-1){
-            System.out.println(new String(bytes,0,len));
-        }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+        String s = bufferedReader.readLine();
+        System.out.println(s);
         OutputStream outputStream = socket.getOutputStream();
-        outputStream.write("hello,client".getBytes());
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream));
+        bufferedWriter.write("hello,client");
+        bufferedWriter.newLine();
+        bufferedWriter.flush();
         socket.shutdownOutput();
         outputStream.close();
         inputStream.close();
