@@ -1,9 +1,6 @@
 package com.socket;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -22,12 +19,16 @@ public class UploadServer {
         BufferedInputStream bufferedInputStream = new BufferedInputStream(accept.getInputStream());
         //将缓冲字节输入流转成数组把图片数据存放到数组中
         byte[] bytes = StreamUtils.toByteArray(bufferedInputStream);
-        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("C:\\Users\\hjly\\Desktop\\服务器接收图片.Png"));
+        BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("src\\new1.png"));
         bufferedOutputStream.write(bytes);
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(accept.getOutputStream()));
+        bufferedWriter.write("我是服务器，已收到图片");
+        bufferedWriter.flush();
+
         bufferedOutputStream.flush();
 
         accept.shutdownOutput();
-
+        bufferedWriter.close();
         bufferedInputStream.close();
         bufferedOutputStream.close();
     }

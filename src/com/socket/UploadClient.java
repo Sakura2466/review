@@ -13,7 +13,7 @@ public class UploadClient {
         //创建流套接字，参数IP+port，客户端向服务器请求建立连接
         Socket socket = new Socket(InetAddress.getLocalHost(), 9999);
         //将图片数据加入缓冲字节输入流
-        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("C:\\Users\\hjly\\Pictures\\华景透明logo.png"));
+        BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream("C:\\Users\\77479\\Pictures\\非洲迦南捏脸1.0.png"));
         //将缓冲字节输入流转成byte数组，byte数组中就是图片数据
         byte[] bytes = StreamUtils.toByteArray(bufferedInputStream);
         //获取字节输出流，准备向服务器发送数据
@@ -25,7 +25,10 @@ public class UploadClient {
         bufferedOutputStream.flush();
         //关闭输出流
         socket.shutdownOutput();
-
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        String s = bufferedReader.readLine();
+        System.out.println(s);
+        bufferedReader.close();
         bufferedInputStream.close();
         bufferedOutputStream.close();
     }
