@@ -12,7 +12,7 @@ public class RejectedExecutionHandlerTest {
     public static void main(String[] args) {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(1, 1, 10L, TimeUnit.SECONDS,
                 new LinkedBlockingQueue<>(2),
-                //TODO 任务拒绝策略
+
                 new ThreadPoolExecutor.DiscardOldestPolicy());
         threadPoolExecutor.execute(new CustomTask(1));
         threadPoolExecutor.execute(new CustomTask(2));
