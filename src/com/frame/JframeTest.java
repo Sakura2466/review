@@ -9,8 +9,8 @@ import javax.swing.*;
 public class JframeTest {
     public static void main(String[] args) {
         JFrame jFrame = new JFrame();
-        jFrame.setSize(300,300);
-        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jFrame.setSize(600, 600);
         jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
 }
