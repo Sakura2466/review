@@ -53,6 +53,7 @@ public class Operator {
          * 条件运算符（三元运算符）：int a = b ? if true : if false
          */
         System.out.println(a==b ? a : b);
+        System.out.println((a>b)?"大于":"不大于");
         System.out.println(b);
         /**
          * instanceof : A instanceof B   判断A是否是B类型或者B类型子类
