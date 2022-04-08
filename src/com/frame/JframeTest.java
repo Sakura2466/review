@@ -24,7 +24,7 @@ public class JframeTest {
         int[] arr = new int[5];
         int[] arr1 = new int[]{1,23};
         int[] arr2 = {23,34};
-        
+
 
 
     }
