@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 public class ReflectionTest {
     public static void main(String[] args) throws Exception {
         Person person = new Person("wh",25);
-        Class<Person> personClass = Person.class;
+        Class<? extends Person> personClass = person.getClass();
         Field[] declaredFields = personClass.getDeclaredFields();
         for (Field declaredField : declaredFields) {
             declaredField.setAccessible(true);
